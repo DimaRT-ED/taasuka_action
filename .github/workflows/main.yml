@@ -25,6 +25,8 @@ jobs:
       - name: say hello
         run: echo "HELLO from GitActions"
 
+      - uses: actions/checkout@v4
+
       - name: see folder
         run: |
           ls -la
@@ -38,6 +40,11 @@ jobs:
           ls -la
 
       - run: cat stam.txt
+
+      - name: RUN TEST
+        run: |
+          chmod +x ./test.sh
+          sh ./test.sh
 
   job-2:
     runs-on: ubuntu-latest
