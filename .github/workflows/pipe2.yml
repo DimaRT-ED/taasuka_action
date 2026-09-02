@@ -1,0 +1,19 @@
+name: SECOND ACTION
+env:
+  GLOB_ENV: "glob-env-value-2"
+  OWNER: "Dima-2"
+
+on:
+  push:
+    branches:
+      - master
+
+  workflow_dispatch:
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: PRINT SECRET
+        run: echo "My secret value is : ${{ secrets.MYSECRET }}"
