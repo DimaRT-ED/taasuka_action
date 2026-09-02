@@ -1,6 +1,6 @@
 name: SECOND ACTION
 env:
-  PROJECT_NAME: "PIPE2-${{ github.sha }}"
+  PROJECT_NAME: "PIPE2-${{ github.sha }}.zip"
   OWNER: "Dima-2"
   BUCKET_NAME: "rt-sadna-git"
   AWS_REGION: "il-central-1"
