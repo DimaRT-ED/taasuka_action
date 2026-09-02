@@ -19,3 +19,7 @@ jobs:
           echo "My secret value is : ${{ secrets.MYSECRET }}"
           echo "PROJECT_NAME : ${{ env.PROJECT_NAME }}"
           echo "REPO NAME : ${{ github.repository }}"
+
+      - run: |
+          echo " this action was triggered by ${{ github.event_name }}"
+          echo " this action run on ${{ runner.os }}"
