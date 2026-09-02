@@ -1,6 +1,6 @@
 name: SECOND ACTION
 env:
-  GLOB_ENV: "glob-env-value-2"
+  PROJECT_NAME: "PIPE2-{{ github.sha }}"
   OWNER: "Dima-2"
 
 on:
@@ -14,6 +14,7 @@ jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
-      
       - name: PRINT SECRET
-        run: echo "My secret value is : ${{ secrets.MYSECRET }}"
+        run: |
+          echo "My secret value is : ${{ secrets.MYSECRET }}"
+          echo "PROJECT_NAME : ${{ env.PROJECT_NAME }}"
