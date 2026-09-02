@@ -1,0 +1,36 @@
+# -------------------------------
+# Created by Dima. 2.9.2026
+# -------------------------------
+name:  FIRST ACTION
+
+on: 
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo "HELLO from GitActions"
+
+      - name: see folder
+        run: |
+          ls -la
+          pwd
+          env
+
+  job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say goodbye
+        run: echo "goodbye from GitActions"
+
+      - run: echo " this action was triggered by ${{ github.action }}
