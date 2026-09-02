@@ -32,6 +32,8 @@ jobs:
       - name: Create package
         run: zip -r ${{ env.PROJECT_NAME }} ./  -x *.git*
 
+      - run: ls -la
+
       - name: Config aws
         uses: aws-actions/configure-aws-credentials@v6
         with:
